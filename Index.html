@@ -1,259 +1,85 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Compounding Pharmacy - Professional Pharmaceutical Services</title>
-    <style>
-        /* Reset and Base Styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-            color: #f5f5f5;
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
-        /* Background */
-        .background {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: url('pharmacy-interior.jpg'); /* Replace with actual image path */
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-            z-index: -1;
-        }
-        .overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.6); /* Soft dark overlay */
-        }
-        /* Navigation Menu */
-        .nav-menu {
-            position: fixed;
-            top: 20px;
-            left: 20px;
-            z-index: 1000;
-            background-color: rgba(40, 40, 40, 0.9);
-            border-radius: 8px;
-            padding: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-            transition: transform 0.3s ease;
-        }
-        .nav-menu:hover {
-            transform: scale(1.05);
-        }
-        .nav-menu ul {
-            list-style: none;
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-        .nav-menu li {
-            display: flex;
-            align-items: center;
-            cursor: pointer;
-            padding: 8px;
-            border-radius: 4px;
-            transition: background-color 0.3s ease;
-        }
-        .nav-menu li:hover {
-            background-color: rgba(255, 255, 255, 0.1);
-        }
-        .nav-menu .icon {
-            width: 20px;
-            height: 20px;
-            margin-right: 10px;
-            fill: #f5f5f5;
-        }
-        .nav-menu a {
-            text-decoration: none;
-            color: #f5f5f5;
-            font-size: 14px;
-        }
-        /* Main Content */
-        .container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            min-height: 100vh;
-            padding: 20px;
-            position: relative;
-            z-index: 1;
-        }
-        .title {
-            font-size: 2.5rem;
-            font-weight: 300;
-            text-align: center;
-            margin-bottom: 40px;
-            color: #e0e0e0;
-        }
-        /* Post-it Cards */
-        .post-its {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-            max-width: 1200px;
-        }
-        .post-it {
-            background-color: rgba(255, 255, 255, 0.95);
-            color: #333;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            width: 300px;
-            min-height: 200px;
-            transform: rotate(-2deg);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            cursor: pointer;
-            position: relative;
-        }
-        .post-it:nth-child(2) {
-            transform: rotate(1deg);
-        }
-        .post-it:nth-child(3) {
-            transform: rotate(-1deg);
-        }
-        .post-it:hover {
-            transform: scale(1.05) rotate(0deg);
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-        }
-        .post-it h3 {
-            font-size: 1.5rem;
-            margin-bottom: 15px;
-            color: #555;
-        }
-        .post-it p {
-            font-size: 1rem;
-            line-height: 1.5;
-        }
-        /* Contact Section */
-        .contact {
-            margin-top: 40px;
-            text-align: center;
-            background-color: rgba(40, 40, 40, 0.9);
-            padding: 20px;
-            border-radius: 8px;
-            max-width: 600px;
-            width: 100%;
-        }
-        .contact h2 {
-            font-size: 1.5rem;
-            margin-bottom: 15px;
-            color: #e0e0e0;
-        }
-        .contact p {
-            margin-bottom: 10px;
-        }
-        .contact a {
-            color: #a0c4ff;
-            text-decoration: none;
-        }
-        .contact a:hover {
-            text-decoration: underline;
-        }
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .title {
-                font-size: 2rem;
-            }
-            .post-its {
-                flex-direction: column;
-                align-items: center;
-            }
-            .post-it {
-                width: 90%;
-                transform: rotate(0deg);
-            }
-            .nav-menu {
-                top: 10px;
-                left: 10px;
-            }
-        }
-    </style>
+    <title>Fórmula Precisa - Serviços Automotivos</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="background">
-        <div class="overlay"></div>
-    </div>
+    <header>
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
     
-    <!-- Navigation Menu -->
-    <nav class="nav-menu">
+    <nav id="side-menu">
         <ul>
+            <li>
+                <svg class="icon" viewBox="0 0 24 24">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/>
+                </svg>
+                <a href="#sobre">Sobre nós</a>
+            </li>
             <li>
                 <svg class="icon" viewBox="0 0 24 24">
                     <path d="M6.62 10.79c1.44 2.83 3.76 5.15 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
                 </svg>
-                <a href="#contact">Contact</a>
-            </li>
-            <li>
-                <svg class="icon" viewBox="0 0 24 24">
-                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                </svg>
-                <a href="#about">About Us</a>
+                <a href="#contato">Contato</a>
             </li>
             <li>
                 <svg class="icon" viewBox="0 0 24 24">
                     <path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/>
                 </svg>
-                <a href="#gallery">Our Space / Gallery</a>
+                <a href="#galeria">Galeria</a>
             </li>
         </ul>
     </nav>
     
-    <!-- Main Content -->
-    <div class="container">
-        <h1 class="title">Compounding Pharmacy</h1>
-        <div class="post-its">
-            <div class="post-it">
-                <h3>What We Do</h3>
-                <p>We specialize in custom medication compounding, creating personalized formulations tailored to individual needs. Our professional pharmaceutical services ensure precise and reliable solutions for our clients.</p>
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Fórmula Precisa</h1>
+                <p>Oferecemos serviços automotivos especializados, com foco em precisão, qualidade e atendimento personalizado.</p>
             </div>
-            <div class="post-it">
-                <h3>Work Safety & Quality Standards</h3>
-                <p>Our pharmacy adheres to strict safety protocols, professional handling procedures, and rigorous hygiene standards. We prioritize quality control in every compounding process, emphasizing responsibility, precision, and meticulous care.</p>
-            </div>
-            <div class="post-it">
-                <h3>Trust & Professionalism</h3>
-                <p>With years of experience, our trained professionals uphold ethical practices and a deep commitment to customer well-being. We build trust through dedication to excellence and personalized attention.</p>
-            </div>
-        </div>
+        </section>
         
-        <!-- Contact Section -->
-        <div class="contact" id="contact">
-            <h2>Contact Us</h2>
-            <p>Phone: (123) 456-7890</p>
-            <p>WhatsApp: <a href="https://wa.me/1234567890">Chat with us</a></p>
-            <p>Address: 123 Pharmacy Lane, City, State, ZIP</p>
-            <!-- Optional: Embed a map here if needed -->
-        </div>
-    </div>
+        <section class="info" id="sobre">
+            <div class="post-its">
+                <div class="post-it">
+                    <h3>Nossos Serviços</h3>
+                    <p>Incluímos manutenção preventiva, reparos mecânicos, personalização de veículos e soluções sob medida para cada cliente.</p>
+                </div>
+                <div class="post-it">
+                    <h3>Compromisso com Qualidade e Segurança</h3>
+                    <p>Seguimos protocolos rigorosos de segurança, procedimentos profissionais e padrões de higiene para garantir excelência em cada serviço.</p>
+                </div>
+                <div class="post-it">
+                    <h3>Serviço Profissional e Confiável</h3>
+                    <p>Nossa equipe experiente adota práticas éticas e se dedica ao bem-estar e satisfação dos clientes, construindo confiança duradoura.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="contact" id="contato">
+            <h2>Contato</h2>
+            <p><strong>Horário de funcionamento:</strong></p>
+            <p>Segunda a Sexta: 08:30 – 19:00</p>
+            <p>Sábado: 08:30 – 12:30</p>
+            <p>Domingo: Fechado</p>
+            <p><strong>Telefone:</strong> <a href="tel:+555331998107">(53) 3199-8107</a></p>
+            <p><strong>Endereço:</strong></p>
+            <p>Av. Dom Joaquim, 120 – Loja 04<br>Três Vendas, Pelotas – RS<br>CEP 96020-260</p>
+            <a href="https://www.google.com/maps/search/?api=1&query=Av.+Dom+Joaquim,+120+-+Loja+04,+Três+Vendas,+Pelotas+-+RS,+CEP+96020-260" target="_blank" class="maps-link">Ver no Google Maps</a>
+        </section>
+    </main>
     
-    <script>
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('.nav-menu a').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
-    </script>
+    <footer>
+        <p>Fórmula Precisa</p>
+    </footer>
+    
+    <script src="script.js"></script>
 </body>
-  </html>
+</html>
